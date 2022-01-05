@@ -22,6 +22,14 @@ to your `package.json`.
 npm install group-dependencies
 ```
 
+OR in CI/CD only 
+
+npm:
+```npm install group-dependencies@git+https://github.com/defiyield-info/group-dependencies#0.1.0-beta.3```
+
+yarn:
+```yarn add group-dependencies@git+https://github.com/defiyield-info/group-dependencies#0.1.0-beta.3```
+
 ## Usage
 
 First, add a new dependencies group to `package.json`:
@@ -45,13 +53,13 @@ Now you can install _only_ the dependencies for this new group:
 
 ```shell
 # This will install jest@^20.0.4:
-deps install test
+deps install npm test
 ```
 
 ### Command
 ```shell
 # Install dependencies in the named group
-deps install [GROUP_NAME]
+deps install npm [GROUP_NAME]
 ```
 
 ### How it works
